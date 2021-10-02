@@ -46,7 +46,7 @@ The order of two or more iterators to the same randomized queue must be mutually
 ### Performance requirements:
 Your randomized queue implementation must support each randomized queue operation (besides creating an iterator) in constant amortized time and use space proportional to the number of items currently in the queue. That is, any sequence of M randomized queue operations (starting from an empty queue) must take at most <i>cM</i> steps in the worst case, for some constant <i>c</i>. Additionally, your iterator implementation must support next() and hasNext() in constant worst-case time and construction in linear time; you may use a linear amount of extra memory per iterator.
 
-### Client:
+## Client
 Write a client program Subset.java that takes a command-line integer k; reads in a sequence of strings from standard input using StdIn.readString(); and prints out exactly k of them, uniformly at random. Each item from the sequence can be printed out at most once.
 
 ```
