@@ -27,20 +27,20 @@ public class Subset {
         while (!StdIn.isEmpty()) {
             StdOut.print("Enter next letter: ");
             letter = StdIn.readString();
-            if (letter.equalsIgnoreCase("end")) {		// Program ends if user types {end}.
+            if (letter.equalsIgnoreCase("end")) {       // Program ends if user types {end}.
                 System.out.println("DONE" + "\n");
                 break;
             }
-            rq.enqueue(letter);							// Enqueue the user's input.
-            sb.append(letter.toUpperCase() + " ");		// Add the value to StringBuilder and make it upperCase.
+            rq.enqueue(letter);                         // Enqueue the user's input.
+            sb.append(letter.toUpperCase() + " ");      // Add the value to StringBuilder and make it upperCase.
         }        
         
         StdOut.print("% echo ");
-        System.out.print(sb.toString());				// Display user's input as a String.
-        int k = rq.size();								// Request and store dimensions of queue.
+        System.out.print(sb.toString());                // Display user's input as a String.
+        int k = rq.size();                              // Request and store dimensions of queue.
         StdOut.println("| java Subset " + k);	
         
-        rq.forEach((r) -> {								// Lambda operation; prints every element in the queue in stochastic order.
+        rq.forEach((r) -> {                             // Lambda operation; prints every element in the queue in stochastic order.
             StdOut.println(r.toUpperCase() + " ");
         });
     }
