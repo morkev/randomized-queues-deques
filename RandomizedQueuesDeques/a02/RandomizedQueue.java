@@ -16,12 +16,12 @@ import edu.princeton.cs.algs4.StdRandom;
 */
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
-	private Item[] queue;	  // Generic array representing the queue.
-    private int queueFinal;   /* Index of the end of the queue,
-                                 also the number of elements in the queue. */
-    
+    private Item[] queue;	  // Generic array representing the queue.
+    private int queueFinal;   	  /* Index of the end of the queue,
+                                  	also the number of elements in the queue. */
+	
     @SuppressWarnings("unchecked")
-	public RandomizedQueue(){
+    public RandomizedQueue(){
         queue = (Item[]) new Object[1]; 
         queueFinal = 0;
     }
@@ -60,7 +60,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             throw new NullPointerException();
         }
         if (queueFinal == queue.length) {
-        	resize(queue.length * 2);		// Doubles the size if the queue's length is equivalent to the size of the array.
+        	resize(queue.length * 2);	// Doubles the size if the queue's length is equivalent to the size of the array.
         }
         queue[queueFinal++] = item; 		// Increases the index of the queue by a margin of one, and assigns the value to the generic instance.
     }
@@ -80,11 +80,11 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         	resize(queue.length / 2);		// Halves the size of the array when it is 1/4 full.
         }
         int index = StdRandom.uniform(0,queueFinal);	// Selects a random index.
-        Item returnValue = queue[index];   				/* Saves the element behind the randomly selected index 
-                                               				which will be returned later. */
-        queue[index] = queue[--queueFinal]; 			/* Fills the hole (randomly selected index is being deleted) 
-                                               				with the last element in the queue. */
-        queue[queueFinal] = null;         				// Avoids thrashing.
+        Item returnValue = queue[index];   		/* Saves the element behind the randomly selected index 
+                                               			which will be returned later. */
+        queue[index] = queue[--queueFinal]; 		/* Fills the hole (randomly selected index is being deleted) 
+                                               			with the last element in the queue. */
+        queue[queueFinal] = null;         		// Avoids thrashing.
         
         return returnValue;
     }
@@ -130,6 +130,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         @Override
         public void remove() {
 	    	throw new UnsupportedOperationException();
-	    }
+	}
     }
 }
