@@ -172,10 +172,10 @@ public class Deque<Item> implements Iterable<Item> {
         @Override
         public Item next() {
             if(!hasNext()) {
-                throw new NoSuchElementException(); //fix location
+                throw new NoSuchElementException();     // Fix location
             }
-            Item item = currentNode.data;		//Assigns the currentNode to item.
-            currentNode = currentNode.right;    //Assigning the node to the right of the currentNode as the new currentNode.	
+            Item item = currentNode.data;		        // Assigns the currentNode to item.
+            currentNode = currentNode.right;            // Assigning the node to the right of the currentNode as the new currentNode.	
             return item;
         }
         @Override
