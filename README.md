@@ -6,7 +6,7 @@ Write a generic data type for a deque and a randomized queue. Implement elementa
 ## Dequeue 
 A double-ended queue or deque is a generalization of a stack and a queue that supports inserting and removing items from either the front or the back of the data structure. Create a generic data type Deque that implements the following API:
 
-```
+```java
 public class Deque<Item> implements Iterable<Item> {
    public Deque()                           // construct an empty deque
    public boolean isEmpty()                 // is the deque empty?
@@ -29,7 +29,7 @@ Your deque implementation must support each deque operation (including construct
 ## Randomized Queue
 A randomized queue is similar to a stack or queue, except that the item removed is chosen uniformly at random from items in the data structure. Create a generic data type RandomizedQueue that implements the following API:
 
-```
+```java
 public class RandomizedQueue<Item> implements Iterable<Item> {
    public RandomizedQueue()                 // construct an empty randomized queue
    public boolean isEmpty()                 // is the queue empty?
@@ -51,7 +51,7 @@ Your randomized queue implementation must support each randomized queue operatio
 ## Client
 Write a client program Subset.java that takes a command-line integer k; reads in a sequence of strings from standard input using StdIn.readString(); and prints out exactly k of them, uniformly at random. Each item from the sequence can be printed out at most once.
 
-```
+```java
 % echo A B C D E F G H I | java Subset 3       % echo AA BB BB BB BB BB CC CC | java Subset 8
 C                                              BB
 G                                              AA
@@ -64,7 +64,7 @@ G                                              BB
 ```
 
 Your program must implement the following API:
-```
+```java
 public class Subset {
    public static void main(String[] args)
 }
