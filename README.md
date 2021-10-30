@@ -20,10 +20,10 @@ public class Deque<Item> implements Iterable<Item> {
 }
 ```
 
-### Corner cases: 
+### Corner Cases 
 Throw a <b><i>java.lang.NullPointerException</i></b> if the client attempts to add a null item; throw a <b><i>java.util.NoSuchElementException</i></b> if the client attempts to remove an item from an empty deque; throw a <b><i>java.lang.UnsupportedOperationException</i></b> if the client calls the remove() method in the iterator; throw a <b><i>java.util.NoSuchElementException</i></b> if the client calls the next() method in the iterator and there are no more items to return.
 
-### Performance requirements: 
+### Performance Requirements 
 Your deque implementation must support each deque operation (including construction) in constant worst-case time and use space proportional to the number of items currently in the deque. Additionally, your iterator implementation must support each operation (including construction) in constant worst-case time.
 
 ## Randomized Queue
@@ -42,10 +42,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 }
 ```
 
-### Corner cases:
+### Corner Cases
 The order of two or more iterators to the same randomized queue must be mutually independent; each iterator must maintain its own random order. Throw a <b><i>java.lang.NullPointerException</i></b> if the client attempts to add a null item; throw a <b><i>java.util.NoSuchElementException</i></b> if the client attempts to sample or dequeue an item from an empty randomized queue; throw a <b><i>java.lang.UnsupportedOperationException</i></b> if the client calls the remove() method in the iterator; throw a <b><i>java.util.NoSuchElementException</i></b> if the client calls the next() method in the iterator and there are no more items to return.
 
-### Performance requirements:
+### Performance Requirements
 Your randomized queue implementation must support each randomized queue operation (besides creating an iterator) in constant amortized time and use space proportional to the number of items currently in the queue. That is, any sequence of M randomized queue operations (starting from an empty queue) must take at most <i>cM</i> steps in the worst case, for some constant <i>c</i>. Additionally, your iterator implementation must support next() and hasNext() in constant worst-case time and construction in linear time; you may use a linear amount of extra memory per iterator.
 
 ## Client
